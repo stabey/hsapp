@@ -64,7 +64,7 @@ rusqlite = { version = "0.37", features = ["bundled"] }
 chrono = { version = "0.4", features = ["serde"] }
 ureq = "2.12"
 base64 = "0.22"
-sha2 = "0.10"
+sha2 = "0.11"
 serde_yaml = "0.9"
 
 # macOS 原生（版本与 gpui 0.2.2 传递依赖对齐，避免重复编译）

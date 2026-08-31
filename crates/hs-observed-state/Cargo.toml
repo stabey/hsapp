@@ -11,7 +11,7 @@ hs-log-core.workspace = true
 thiserror.workspace = true
 serde.workspace = true
 serde_json.workspace = true
-sha2 = "0.10"
+sha2 = "0.11"
 
 [dev-dependencies]
 hs-log-tailer.workspace = true
