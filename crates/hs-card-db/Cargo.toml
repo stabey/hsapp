@@ -13,4 +13,4 @@ serde.workspace = true
 serde_json.workspace = true
 tracing.workspace = true
 ureq.workspace = true
-sha2 = "0.10"
+sha2 = "0.11"
