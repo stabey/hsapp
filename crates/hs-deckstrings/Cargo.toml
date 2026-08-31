@@ -1,0 +1,15 @@
+[package]
+name = "hs-deckstrings"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+hs-types = { workspace = true }
+serde = { workspace = true }
+thiserror = { workspace = true }
+base64 = { workspace = true }
+
+[dev-dependencies]
+serde_json = { workspace = true }

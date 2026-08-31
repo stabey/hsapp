@@ -1,0 +1,5 @@
+# 锁定 CI 与 rustup 用户的工具链版本（本机 Homebrew rust 会忽略此文件）。
+# GPUI 要求较新的 stable；升级此版本时需重跑 GPUI 冒烟验证（见 ADR-0002）。
+[toolchain]
+channel = "1.97.1"
+components = ["rustfmt", "clippy"]

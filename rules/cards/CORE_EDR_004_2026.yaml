@@ -1,0 +1,20 @@
+# 迅猛龙先锋:战吼——发现一张具有黑暗之赐的野兽牌(池 discover.dark_gift_beasts)。
+# partial:回溯、延系(费用 -1)与黑暗之赐附魔均超出 M3 执行范围;
+# 池的黑暗之赐/Tribe 过滤见池文件已知降级。
+schema: 1
+card_id: CORE_EDR_004_2026
+build_range:
+  min: 249896
+status: partial
+confidence: 0.6
+triggers:
+  - event: battlecry
+    effects:
+      - !discover
+        pool: discover.dark_gift_beasts
+        options: 3
+        count: 1
+evidence:
+  - kind: test
+    reference: crates/hs-sim/tests/deck_rules.rs
+    date: "2026-08-24"

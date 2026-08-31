@@ -1,0 +1,17 @@
+# 蛙生:发现一张随从牌。
+pool_id: discover.any_minion
+source_card_id: JAIL_EVENT_100
+build_range:
+  min: 249896
+kind: discover
+filters:
+  - format_legal
+  - !card_type MINION
+  - !collectible true
+  - exclude_source
+context_inputs: [build, format, source_card]
+selection:
+  picks: 3
+  distinct: true
+weight_rule: uniform
+status: inferred

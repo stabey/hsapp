@@ -1,0 +1,218 @@
+{
+  "fixture_id": "budget_truncation",
+  "fixture_schema_version": 1,
+  "projection": {
+    "build_id": 249896,
+    "candidates": [
+      {
+        "chance": {
+          "available": true,
+          "downside_milli": 0,
+          "estimated": false,
+          "expected_milli": -1200,
+          "max_milli": -1200,
+          "min_milli": -1200,
+          "probability_mass_units": 1000000000000000,
+          "probability_scale": 1000000000000000,
+          "rank_milli": -1200,
+          "sample_count": 0
+        },
+        "complete": true,
+        "confidence": {
+          "factors": [
+            {
+              "confidence": 1.0,
+              "reason": "server_legal_action"
+            },
+            {
+              "confidence": 1.0,
+              "reason": "deterministic_simulation"
+            }
+          ]
+        },
+        "evidence": {
+          "exact": true,
+          "had_exact_chance": false,
+          "pool_snapshot_hashes": [],
+          "rule_uses": [],
+          "sample_count": 0,
+          "truncated": false,
+          "unknown_rule_cards": []
+        },
+        "explanation": "对手仍保留较高的有效生命。 (raw 30, -4200 milli); 己方有效生命更安全。 (raw 30, +3000 milli)",
+        "first_action": {
+          "kind": "end_turn",
+          "server_ref": {
+            "option_index": 1,
+            "options_id": 901,
+            "position": null,
+            "sub_option_index": null,
+            "target": null
+          },
+          "source": null
+        },
+        "follow_up": [],
+        "lethal": {
+          "kind": "none"
+        },
+        "lethal_first_route": false,
+        "path": [
+          {
+            "kind": "end_turn",
+            "origin": "server",
+            "server_ref": {
+              "option_index": 1,
+              "options_id": 901,
+              "position": null,
+              "sub_option_index": null,
+              "target": null
+            },
+            "source": null
+          }
+        ],
+        "path_seed": 9506217416907690481,
+        "rank_chance": {
+          "downside_milli": 0,
+          "expected_milli": -1200,
+          "max_milli": -1200,
+          "min_milli": -1200,
+          "probability_mass_units": 1000000000000000,
+          "rank_milli": -1200
+        },
+        "risks": [],
+        "rule_coverage": {
+          "items": []
+        },
+        "score": {
+          "components": [
+            {
+              "feature": "friendly_effective_health",
+              "raw": 30,
+              "weight_milli": 100
+            },
+            {
+              "feature": "opponent_effective_health",
+              "raw": 30,
+              "weight_milli": -140
+            },
+            {
+              "feature": "friendly_board_attack",
+              "raw": 0,
+              "weight_milli": 220
+            },
+            {
+              "feature": "opponent_board_attack",
+              "raw": 0,
+              "weight_milli": -240
+            },
+            {
+              "feature": "friendly_board_health",
+              "raw": 0,
+              "weight_milli": 90
+            },
+            {
+              "feature": "opponent_board_health",
+              "raw": 0,
+              "weight_milli": -100
+            },
+            {
+              "feature": "friendly_board_value",
+              "raw": 0,
+              "weight_milli": 120
+            },
+            {
+              "feature": "opponent_board_value",
+              "raw": 0,
+              "weight_milli": -130
+            },
+            {
+              "feature": "friendly_hand_size",
+              "raw": 0,
+              "weight_milli": 55
+            },
+            {
+              "feature": "opponent_hand_size",
+              "raw": 0,
+              "weight_milli": -45
+            },
+            {
+              "feature": "resource_advantage",
+              "raw": 0,
+              "weight_milli": 100
+            },
+            {
+              "feature": "mana_efficiency",
+              "raw": 0,
+              "weight_milli": 90
+            },
+            {
+              "feature": "playbook_preference",
+              "raw": 0,
+              "weight_milli": 0
+            },
+            {
+              "feature": "risk_penalty",
+              "raw": 0,
+              "weight_milli": -1000
+            }
+          ],
+          "total_milli": -1200
+        },
+        "win_point": "保持安全血线，避免把当前优势换成可见的反击窗口。"
+      }
+    ],
+    "canonical_path_seed_version": 1,
+    "complete": false,
+    "lethal_first": {
+      "kind": "unknown"
+    },
+    "playbook_id": "generic",
+    "playbook_selection": {
+      "build": 249896,
+      "kind": "generic_fallback",
+      "reason": "deck_signature_unavailable"
+    },
+    "rule_coverage": {
+      "items": []
+    },
+    "search_completeness": {
+      "evidence_cap": 0.75,
+      "ratio": 0.5,
+      "reliably_compared": 1,
+      "total": 2
+    },
+    "search_completeness_policy_version": 1,
+    "stats": {
+      "beam_roots_evaluated": 0,
+      "candidates_evaluated": 1,
+      "config": {
+        "beam_width": 2,
+        "candidate_budget": 1,
+        "max_depth": 1,
+        "node_budget": 16,
+        "seed": 505,
+        "sim_branch_budget": 64
+      },
+      "deduplicated_nodes": 0,
+      "layer_widths": [
+        0
+      ],
+      "legal_root_total": 2,
+      "lethal_candidates_evaluated": 1,
+      "lethal_max_depth_reached": 1,
+      "lethal_nodes_visited": 1,
+      "lethal_roots_evaluated": 1,
+      "lethal_simulation_branches_examined": 1,
+      "max_depth_reached": 1,
+      "nodes_visited": 1,
+      "roots_evaluated": 1,
+      "roots_reliably_compared": 1,
+      "simulation_branches_examined": 1,
+      "unknown_roots": 0,
+      "unsupported_roots": 0
+    },
+    "stop_reasons": [
+      "candidate_budget"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+# 栉龙:战吼——抽一张牌。亡语——弃掉该牌。
+# partial:弃牌无对应 Operation(§11.4 无 Discard),且「该牌」需要
+# 跨事件实体引用;亡语部分未表达。
+schema: 1
+card_id: TLC_603
+build_range:
+  min: 249896
+status: partial
+confidence: 0.7
+triggers:
+  - event: battlecry
+    effects:
+      - !draw
+        player: self_player
+        count: 1
+evidence:
+  - kind: test
+    reference: crates/hs-sim/tests/deck_rules.rs
+    date: "2026-08-24"

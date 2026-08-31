@@ -1,0 +1,39 @@
+# authenticity: synthetic
+# note: M1 S2 扩充。格式对齐 Power.log GameState.* 输出。
+#       PowerTaskList 行故意保留，验证不重复消费。LoadingScreen 仍为 Unknown。
+D 21:35:47.4835077 GameState.DebugPrintPower() - CREATE_GAME
+D 21:35:47.4835077 GameState.DebugPrintPower() -     GameEntity EntityID=1
+D 21:35:47.4835077 GameState.DebugPrintPower() -         tag=TURN value=1
+D 21:35:47.4835077 GameState.DebugPrintPower() -         tag=ZONE value=PLAY
+D 21:35:47.4835077 GameState.DebugPrintPower() -         tag=ENTITY_ID value=1
+D 21:35:47.4835077 GameState.DebugPrintPower() -     Player EntityID=2 PlayerID=1 GameAccountId=[hi=0 lo=0]
+D 21:35:47.4835077 GameState.DebugPrintPower() -         tag=PLAYSTATE value=PLAYING
+D 21:35:47.4835077 GameState.DebugPrintPower() -         tag=ZONE value=PLAY
+D 21:35:47.4835077 GameState.DebugPrintPower() -         tag=ENTITY_ID value=2
+D 21:35:47.4835077 GameState.DebugPrintPower() -     Player EntityID=3 PlayerID=2 GameAccountId=[hi=0 lo=0]
+D 21:35:47.4835077 GameState.DebugPrintPower() -         tag=PLAYSTATE value=PLAYING
+D 21:35:47.4835077 GameState.DebugPrintPower() -         tag=ZONE value=PLAY
+D 21:35:47.4835077 GameState.DebugPrintPower() -         tag=ENTITY_ID value=3
+D 21:35:47.5012000 GameState.DebugPrintPower() - FULL_ENTITY - Creating ID=4 CardID=HERO_01
+D 21:35:47.5012000 GameState.DebugPrintPower() -     tag=HEALTH value=30
+D 21:35:47.5012000 GameState.DebugPrintPower() -     tag=ZONE value=PLAY
+D 21:35:47.5012000 GameState.DebugPrintPower() -     tag=CONTROLLER value=1
+D 21:35:47.5012000 GameState.DebugPrintPower() -     tag=ENTITY_ID value=4
+D 21:35:47.5012000 GameState.DebugPrintPower() -     tag=CARDTYPE value=HERO
+D 21:35:47.5100000 GameState.DebugPrintPower() - TAG_CHANGE Entity=GameEntity tag=STEP value=BEGIN_MULLIGAN
+D 21:35:47.5100000 GameState.DebugPrintPower() - TAG_CHANGE Entity=[entityName=UNKNOWN ENTITY [cardType=INVALID] id=4 zone=PLAY zonePos=0 cardId= player=1] tag=DAMAGE value=0
+D 21:35:47.5200000 GameState.DebugPrintPower() - BLOCK_START BlockType=TRIGGER Entity=GameEntity EffectCardId=System EffectIndex=-1 Target=0 SubOption=-1 TriggerKeyword=TRIGGER_VISUAL
+D 21:35:47.5200100 GameState.DebugPrintPower() - BLOCK_END
+D 21:35:47.5200200 PowerTaskList.DebugPrintPower() - BLOCK_START BlockType=TRIGGER Entity=GameEntity EffectCardId=System EffectIndex=-1 Target=0 SubOption=-1
+I 21:35:47.5300000 LoadingScreen.OnSceneLoaded() - prevMode=INVALID nextMode=GAMEPLAY
+D 21:35:47.5400000 GameState.DebugPrintPower() - SHOW_ENTITY - Updating Entity=[entityName=UNKNOWN ENTITY [cardType=INVALID] id=4 zone=PLAY zonePos=0 cardId=HERO_01 player=1] CardID=HERO_01
+D 21:35:47.5400000 GameState.DebugPrintPower() -     tag=COST value=0
+D 21:35:47.5400000 GameState.DebugPrintPower() -     tag=ZONE value=PLAY
+D 21:35:47.5500000 GameState.DebugPrintOptions() - id=1
+D 21:35:47.5500000 GameState.DebugPrintOptions() -   option 0 type=END_TURN mainEntity= error=INVALID errorParam=
+D 21:35:47.5500000 GameState.DebugPrintOptions() -   option 1 type=POWER mainEntity=[entityName=UNKNOWN ENTITY [cardType=INVALID] id=4 zone=PLAY zonePos=0 cardId=HERO_01 player=1] error=NONE errorParam=
+D 21:35:47.5500000 GameState.DebugPrintOptions() -     target 0 entity=[entityName=UNKNOWN ENTITY [cardType=INVALID] id=3 zone=PLAY zonePos=0 cardId= player=2] error=NONE errorParam=
+D 21:35:47.5600000 GameState.DebugPrintEntityChoices() - id=1 Player=2 TaskList=4 ChoiceType=MULLIGAN CountMin=0 CountMax=3
+D 21:35:47.5600000 GameState.DebugPrintEntityChoices() -   Source=GameEntity
+D 21:35:47.5600000 GameState.DebugPrintEntityChoices() -   Entities[0]=[entityName=UNKNOWN ENTITY [cardType=INVALID] id=12 zone=HAND zonePos=1 cardId= player=1]
+D 21:35:47.5600000 GameState.DebugPrintEntityChoices() -   Entities[1]=[entityName=UNKNOWN ENTITY [cardType=INVALID] id=13 zone=HAND zonePos=2 cardId= player=1]

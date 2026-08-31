@@ -1,0 +1,21 @@
+# 警卫犬:亡语——随机召唤一个法力值消耗为(1)的亡语随从。
+# partial:池的「具有亡语」过滤不可表达(池文件已记);亡语触发本身
+# 可表达,召唤经随机池。执行器自 2026-08-28 起已级联亡语:死亡结算阶段
+# 经 RuleLookup 查到本 trigger 并自动执行(apply_program_with_rules),
+# 调用方不再需要手工 apply。
+schema: 1
+card_id: JAIL_878
+build_range:
+  min: 249896
+status: partial
+confidence: 0.7
+triggers:
+  - event: deathrattle
+    effects:
+      - !random_choice
+        pool: random.one_cost_deathrattle_minions
+        count: 1
+evidence:
+  - kind: test
+    reference: crates/hs-sim/tests/deck_rules.rs
+    date: "2026-08-24"

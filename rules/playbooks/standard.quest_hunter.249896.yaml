@@ -1,0 +1,78 @@
+schema_version: 1
+id: standard.quest_hunter.249896
+priority: 100
+applies_to:
+  build_range:
+    min: 249896
+    max: 249896
+  deck_signatures:
+    - main:
+        - { card_id: CATA_554, count: 1 }
+        - { card_id: CORE_BAR_801, count: 2 }
+        - { card_id: CORE_DS1_184, count: 2 }
+        - { card_id: CORE_EDR_004_2026, count: 2 }
+        - { card_id: CORE_EX1_014, count: 1 }
+        - { card_id: CORE_SW_072, count: 1 }
+        - { card_id: CORE_UNG_912, count: 2 }
+        - { card_id: EDR_453, count: 1 }
+        - { card_id: EDR_846, count: 1 }
+        - { card_id: JAIL_831, count: 1 }
+        - { card_id: JAIL_877, count: 2 }
+        - { card_id: JAIL_878, count: 2 }
+        - { card_id: JAIL_EVENT_100, count: 1 }
+        - { card_id: TIME_053, count: 2 }
+        - { card_id: TLC_366, count: 2 }
+        - { card_id: TLC_603, count: 2 }
+        - { card_id: TLC_823, count: 2 }
+        - { card_id: TLC_825, count: 2 }
+        - { card_id: TLC_830, count: 1 }
+      sideboard:
+        - { owner_card_id: JAIL_831, card_id: EDR_489, count: 1 }
+        - { owner_card_id: JAIL_831, card_id: EDR_527, count: 1 }
+        - { owner_card_id: JAIL_831, card_id: TLC_436, count: 1 }
+weights:
+  friendly_effective_health: 90
+  opponent_effective_health: -155
+  friendly_board_attack: 260
+  opponent_board_attack: -220
+  friendly_board_health: 80
+  opponent_board_health: -90
+  friendly_board_value: 140
+  opponent_board_value: -115
+  friendly_hand_size: 75
+  opponent_hand_size: -35
+  resource_advantage: 120
+  mana_efficiency: 110
+  playbook_preference: 0
+  risk_penalty: -1000
+risk_weight_milli: 300
+win_points:
+  - id: sustain_beast_pressure
+    feature: friendly_board_attack
+    comparison: at_least
+    threshold: 5
+    message: 保留野兽体系的持续场攻，让后续抽牌仍能转化为压力。
+  - id: preserve_options
+    feature: friendly_hand_size
+    comparison: at_least
+    threshold: 4
+    message: 保留足够手牌选项，避免在任务机制尚未验证时虚构进度收益。
+explanations:
+  opponent_effective_health:
+    positive: 任务猎偏好把现有压力直接转化为有效伤害。
+    negative: 这条路线没有充分压低对手的生命与护甲。
+  friendly_board_attack:
+    positive: 这条路线保留了任务猎的持续场攻。
+    negative: 这条路线会削弱后续可见的场攻压力。
+  friendly_board_value:
+    positive: 场面资源得到有效保留。
+    negative: 场面交换损失了较多已知价值。
+  friendly_hand_size:
+    positive: 手牌选项得到保留。
+    negative: 手牌消耗会缩小后续选择空间。
+  mana_efficiency:
+    positive: 这条路线高效利用了当前回合法力。
+    negative: 当前回合法力利用不足。
+  risk_penalty:
+    positive: 这条路线的随机下行较可控。
+    negative: 随机结果或不完整证据会放大下行风险。

@@ -1,0 +1,18 @@
+# 宝石鹦鹉:战吼——随机将一张野兽牌置入你的手牌(池 random.beast_cards)。
+# partial:池的 Tribe 过滤暂为空过滤(PRD 已知降级)。
+schema: 1
+card_id: CORE_UNG_912
+build_range:
+  min: 249896
+status: partial
+confidence: 0.8
+triggers:
+  - event: battlecry
+    effects:
+      - !random_choice
+        pool: random.beast_cards
+        count: 1
+evidence:
+  - kind: test
+    reference: crates/hs-sim/tests/deck_rules.rs
+    date: "2026-08-24"

@@ -1,0 +1,19 @@
+# 宝石鹦鹉:随机一张野兽牌置入手牌。
+# 已知降级:Tribe 过滤暂为空过滤(CardMeta 无种族字段,PRD 已记),
+# 候选会比真实池宽;补上种族字段后本池自动收窄。
+pool_id: random.beast_cards
+source_card_id: CORE_UNG_912
+build_range:
+  min: 249896
+kind: random_card
+filters:
+  - format_legal
+  - !card_type MINION
+  - !tribe BEAST
+  - !collectible true
+context_inputs: [build, format]
+selection:
+  picks: 1
+  distinct: true
+weight_rule: uniform
+status: partial

@@ -1,0 +1,16 @@
+[package]
+name = "hs-tracker"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+hs-types = { workspace = true }
+hs-log-core = { workspace = true }
+hs-observed-state = { workspace = true }
+hs-deckstrings = { workspace = true }
+serde = { workspace = true }
+
+[dev-dependencies]
+hs-log-tailer = { workspace = true }

@@ -1,0 +1,21 @@
+# 警卫犬:随机召唤一个法力值消耗为(1)的亡语随从。
+# 已知降级:「具有亡语」不可用现有 PoolFilter 表达(需机制标签过滤,
+# CardMeta 无该字段),候选比真实池宽;status=partial 记录缺口。
+pool_id: random.one_cost_deathrattle_minions
+source_card_id: JAIL_878
+build_range:
+  min: 249896
+kind: random_summon
+filters:
+  - format_legal
+  - !card_type MINION
+  - !cost_between
+    min: 1
+    max: 1
+  - !collectible true
+context_inputs: [build, format]
+selection:
+  picks: 1
+  distinct: true
+weight_rule: uniform
+status: partial

@@ -1,0 +1,17 @@
+# 下水道管网(地标):召唤一只 2/1 鼠吻贮藏者(JAIL_877t,亡语抽牌)。
+# 地标使用机制与 token 的亡语级联不在 M3 执行范围;召唤本身可执行。
+schema: 1
+card_id: JAIL_877
+build_range:
+  min: 249896
+status: verified
+confidence: 0.9
+play:
+  - !summon
+    player: self_player
+    card: !id JAIL_877t
+    count: 1
+evidence:
+  - kind: test
+    reference: crates/hs-sim/tests/deck_rules.rs
+    date: "2026-08-24"

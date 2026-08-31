@@ -1,0 +1,15 @@
+[package]
+name = "hs-log-tailer"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+hs-log-record.workspace = true
+hs-types.workspace = true
+thiserror.workspace = true
+chrono.workspace = true
+
+[dev-dependencies]
+tempfile = "3"

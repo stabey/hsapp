@@ -1,0 +1,12 @@
+# 阿迦玛甘(下水道之王私藏):战吼——下一张牌消耗对手生命值而非法力值。
+# unknown:延时替换效果,超出 M3 执行模型。
+schema: 1
+card_id: EDR_489
+build_range:
+  min: 249896
+status: unknown
+confidence: 0.0
+evidence:
+  - kind: manual
+    reference: 卡牌文本(build 249896)
+    date: "2026-08-24"

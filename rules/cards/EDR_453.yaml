@@ -1,0 +1,23 @@
+# 棘嗣幼龙:回合结束时随机攻击一个敌方随从(溢出伤害进英雄)。
+# partial:Attack 操作在 IR 可表达,但在 M3 执行子集之外——试执行会
+# 显式报告 Unsupported(NotImplemented),这正是验收要的显式路径。
+schema: 1
+card_id: EDR_453
+build_range:
+  min: 249896
+status: partial
+confidence: 0.7
+triggers:
+  - event: turn_end
+    when:
+      - subject: source
+        condition:
+          controller: self_player
+    effects:
+      - !attack
+        attacker: self_entity
+        defender: enemy_minions
+evidence:
+  - kind: manual
+    reference: 卡牌文本(build 249896);执行留 M4 战斗结算
+    date: "2026-08-24"

@@ -1,0 +1,30 @@
+{
+  "pool_id": "golden.graveyard",
+  "build_id": 249896,
+  "context_hash": "4779c5a3c4eba62ca94652f2f1a391434c7a0c2a3b58ef21d7de0b4d56525d5e",
+  "candidates": [
+    {
+      "card_id": "CS2_029",
+      "dbf_id": 315,
+      "weight": 1.0
+    },
+    {
+      "card_id": "CS2_122",
+      "dbf_id": 1401,
+      "weight": 1.0
+    },
+    {
+      "card_id": "EX1_116",
+      "dbf_id": 559,
+      "weight": 1.0
+    }
+  ],
+  "trace": [
+    {
+      "step": "initial",
+      "removed": 0,
+      "remaining": 3
+    }
+  ],
+  "exact": true
+}

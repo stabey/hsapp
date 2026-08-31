@@ -1,0 +1,79 @@
+[workspace]
+resolver = "2"
+members = [
+    "apps/desktop",
+    "crates/hs-types",
+    "crates/hs-platform",
+    "crates/hs-overlay-platform",
+    "crates/hs-log-record",
+    "crates/hs-log-tailer",
+    "crates/hs-log-core",
+    "crates/hs-observed-state",
+    "crates/hs-card-db",
+    "crates/hs-card-sync",
+    "crates/hs-deckstrings",
+    "crates/hs-decks",
+    "crates/hs-tracker",
+    "crates/hs-ui",
+    "crates/hs-diagnostics",
+    "crates/hs-effect-ir",
+    "crates/hs-pools",
+    "crates/hs-sim",
+    "crates/hs-belief",
+    "crates/hs-advisor-api",
+    "crates/hs-planner",
+    "xtask",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+publish = false
+
+[workspace.dependencies]
+# Internal crates
+hs-types = { path = "crates/hs-types" }
+hs-platform = { path = "crates/hs-platform" }
+hs-overlay-platform = { path = "crates/hs-overlay-platform" }
+hs-log-record = { path = "crates/hs-log-record" }
+hs-log-tailer = { path = "crates/hs-log-tailer" }
+hs-log-core = { path = "crates/hs-log-core" }
+hs-observed-state = { path = "crates/hs-observed-state" }
+hs-card-db = { path = "crates/hs-card-db" }
+hs-deckstrings = { path = "crates/hs-deckstrings" }
+hs-decks = { path = "crates/hs-decks" }
+hs-tracker = { path = "crates/hs-tracker" }
+hs-ui = { path = "crates/hs-ui" }
+hs-diagnostics = { path = "crates/hs-diagnostics" }
+hs-effect-ir = { path = "crates/hs-effect-ir" }
+hs-pools = { path = "crates/hs-pools" }
+hs-sim = { path = "crates/hs-sim" }
+hs-belief = { path = "crates/hs-belief" }
+hs-advisor-api = { path = "crates/hs-advisor-api" }
+hs-planner = { path = "crates/hs-planner" }
+
+# External
+thiserror = "2"
+anyhow = "1"
+serde = { version = "1", features = ["derive", "rc"] }
+serde_json = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+rusqlite = { version = "0.37", features = ["bundled"] }
+chrono = { version = "0.4", features = ["serde"] }
+ureq = "2.12"
+base64 = "0.22"
+sha2 = "0.10"
+serde_yaml = "0.9"
+
+# macOS 原生（版本与 gpui 0.2.2 传递依赖对齐，避免重复编译）
+objc = "0.2"
+core-foundation = "0.10"
+core-graphics = "0.24"
+raw-window-handle = "0.6"
+
+[profile.dev]
+# GPUI 编译较重，dev 下依赖用 O2 提升迭代运行速度
+[profile.dev.package."*"]
+opt-level = 2

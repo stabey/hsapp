@@ -1,0 +1,403 @@
+{
+  "fixture_id": "quest_hunter",
+  "fixture_schema_version": 1,
+  "projection": {
+    "build_id": 249896,
+    "candidates": [
+      {
+        "chance": {
+          "available": true,
+          "downside_milli": 0,
+          "estimated": false,
+          "expected_milli": 4135,
+          "max_milli": 4135,
+          "min_milli": 4135,
+          "probability_mass_units": 1000000000000000,
+          "probability_scale": 1000000000000000,
+          "rank_milli": 4135,
+          "sample_count": 0
+        },
+        "complete": true,
+        "confidence": {
+          "factors": [
+            {
+              "confidence": 1.0,
+              "reason": "server_legal_action"
+            },
+            {
+              "confidence": 0.8500000238418579,
+              "reason": "simulated_legal_action"
+            },
+            {
+              "confidence": 1.0,
+              "reason": "deterministic_simulation"
+            }
+          ]
+        },
+        "evidence": {
+          "exact": true,
+          "had_exact_chance": false,
+          "pool_snapshot_hashes": [],
+          "rule_uses": [],
+          "sample_count": 0,
+          "truncated": false,
+          "unknown_rule_cards": []
+        },
+        "explanation": "这条路线没有充分压低对手的生命与护甲。 (raw 23, -3565 milli); Friendly effective health helps (raw 30, +2700 milli); 场面资源得到有效保留。 (raw 17, +2380 milli)",
+        "first_action": {
+          "kind": "attack",
+          "server_ref": {
+            "option_index": 1,
+            "options_id": 901,
+            "position": null,
+            "sub_option_index": null,
+            "target": 5
+          },
+          "source": 10
+        },
+        "follow_up": [
+          {
+            "kind": "attack",
+            "origin": "simulated",
+            "position": null,
+            "source": 11,
+            "sub_option_index": null,
+            "target": 5
+          }
+        ],
+        "lethal": {
+          "kind": "none"
+        },
+        "lethal_first_route": false,
+        "path": [
+          {
+            "kind": "attack",
+            "origin": "server",
+            "server_ref": {
+              "option_index": 1,
+              "options_id": 901,
+              "position": null,
+              "sub_option_index": null,
+              "target": 5
+            },
+            "source": 10
+          },
+          {
+            "kind": "attack",
+            "origin": "simulated",
+            "server_ref": {
+              "option_index": 2,
+              "options_id": 901,
+              "position": null,
+              "sub_option_index": null,
+              "target": 5
+            },
+            "source": 11
+          }
+        ],
+        "path_seed": 16294304061065646065,
+        "rank_chance": {
+          "downside_milli": 0,
+          "expected_milli": 4135,
+          "max_milli": 4135,
+          "min_milli": 4135,
+          "probability_mass_units": 1000000000000000,
+          "rank_milli": 4135
+        },
+        "risks": [
+          {
+            "code": "actions.simulated_follow_up",
+            "detail": "Only the first action is server-confirmed; later actions are conservative previews.",
+            "kind": "derived_legality"
+          }
+        ],
+        "rule_coverage": {
+          "items": []
+        },
+        "score": {
+          "components": [
+            {
+              "feature": "friendly_effective_health",
+              "raw": 30,
+              "weight_milli": 90
+            },
+            {
+              "feature": "opponent_effective_health",
+              "raw": 23,
+              "weight_milli": -155
+            },
+            {
+              "feature": "friendly_board_attack",
+              "raw": 7,
+              "weight_milli": 260
+            },
+            {
+              "feature": "opponent_board_attack",
+              "raw": 0,
+              "weight_milli": -220
+            },
+            {
+              "feature": "friendly_board_health",
+              "raw": 10,
+              "weight_milli": 80
+            },
+            {
+              "feature": "opponent_board_health",
+              "raw": 0,
+              "weight_milli": -90
+            },
+            {
+              "feature": "friendly_board_value",
+              "raw": 17,
+              "weight_milli": 140
+            },
+            {
+              "feature": "opponent_board_value",
+              "raw": 0,
+              "weight_milli": -115
+            },
+            {
+              "feature": "friendly_hand_size",
+              "raw": 0,
+              "weight_milli": 75
+            },
+            {
+              "feature": "opponent_hand_size",
+              "raw": 0,
+              "weight_milli": -35
+            },
+            {
+              "feature": "resource_advantage",
+              "raw": 0,
+              "weight_milli": 120
+            },
+            {
+              "feature": "mana_efficiency",
+              "raw": 0,
+              "weight_milli": 110
+            },
+            {
+              "feature": "playbook_preference",
+              "raw": 0,
+              "weight_milli": 0
+            },
+            {
+              "feature": "risk_penalty",
+              "raw": 0,
+              "weight_milli": -1000
+            }
+          ],
+          "total_milli": 4135
+        },
+        "win_point": "保留野兽体系的持续场攻，让后续抽牌仍能转化为压力。"
+      },
+      {
+        "chance": {
+          "available": true,
+          "downside_milli": 0,
+          "estimated": false,
+          "expected_milli": 3670,
+          "max_milli": 3670,
+          "min_milli": 3670,
+          "probability_mass_units": 1000000000000000,
+          "probability_scale": 1000000000000000,
+          "rank_milli": 3670,
+          "sample_count": 0
+        },
+        "complete": true,
+        "confidence": {
+          "factors": [
+            {
+              "confidence": 1.0,
+              "reason": "server_legal_action"
+            },
+            {
+              "confidence": 1.0,
+              "reason": "deterministic_simulation"
+            }
+          ]
+        },
+        "evidence": {
+          "exact": true,
+          "had_exact_chance": false,
+          "pool_snapshot_hashes": [],
+          "rule_uses": [],
+          "sample_count": 0,
+          "truncated": false,
+          "unknown_rule_cards": []
+        },
+        "explanation": "这条路线没有充分压低对手的生命与护甲。 (raw 26, -4030 milli); Friendly effective health helps (raw 30, +2700 milli); 场面资源得到有效保留。 (raw 17, +2380 milli)",
+        "first_action": {
+          "kind": "attack",
+          "server_ref": {
+            "option_index": 2,
+            "options_id": 901,
+            "position": null,
+            "sub_option_index": null,
+            "target": 5
+          },
+          "source": 11
+        },
+        "follow_up": [],
+        "lethal": {
+          "kind": "none"
+        },
+        "lethal_first_route": false,
+        "path": [
+          {
+            "kind": "attack",
+            "origin": "server",
+            "server_ref": {
+              "option_index": 2,
+              "options_id": 901,
+              "position": null,
+              "sub_option_index": null,
+              "target": 5
+            },
+            "source": 11
+          }
+        ],
+        "path_seed": 11360680085853508207,
+        "rank_chance": {
+          "downside_milli": 0,
+          "expected_milli": 3670,
+          "max_milli": 3670,
+          "min_milli": 3670,
+          "probability_mass_units": 1000000000000000,
+          "rank_milli": 3670
+        },
+        "risks": [],
+        "rule_coverage": {
+          "items": []
+        },
+        "score": {
+          "components": [
+            {
+              "feature": "friendly_effective_health",
+              "raw": 30,
+              "weight_milli": 90
+            },
+            {
+              "feature": "opponent_effective_health",
+              "raw": 26,
+              "weight_milli": -155
+            },
+            {
+              "feature": "friendly_board_attack",
+              "raw": 7,
+              "weight_milli": 260
+            },
+            {
+              "feature": "opponent_board_attack",
+              "raw": 0,
+              "weight_milli": -220
+            },
+            {
+              "feature": "friendly_board_health",
+              "raw": 10,
+              "weight_milli": 80
+            },
+            {
+              "feature": "opponent_board_health",
+              "raw": 0,
+              "weight_milli": -90
+            },
+            {
+              "feature": "friendly_board_value",
+              "raw": 17,
+              "weight_milli": 140
+            },
+            {
+              "feature": "opponent_board_value",
+              "raw": 0,
+              "weight_milli": -115
+            },
+            {
+              "feature": "friendly_hand_size",
+              "raw": 0,
+              "weight_milli": 75
+            },
+            {
+              "feature": "opponent_hand_size",
+              "raw": 0,
+              "weight_milli": -35
+            },
+            {
+              "feature": "resource_advantage",
+              "raw": 0,
+              "weight_milli": 120
+            },
+            {
+              "feature": "mana_efficiency",
+              "raw": 0,
+              "weight_milli": 110
+            },
+            {
+              "feature": "playbook_preference",
+              "raw": 0,
+              "weight_milli": 0
+            },
+            {
+              "feature": "risk_penalty",
+              "raw": 0,
+              "weight_milli": -1000
+            }
+          ],
+          "total_milli": 3670
+        },
+        "win_point": "保留野兽体系的持续场攻，让后续抽牌仍能转化为压力。"
+      }
+    ],
+    "canonical_path_seed_version": 1,
+    "complete": true,
+    "lethal_first": {
+      "kind": "none"
+    },
+    "playbook_id": "standard.quest_hunter.249896",
+    "playbook_selection": {
+      "build": 249896,
+      "kind": "exact_deck_match"
+    },
+    "rule_coverage": {
+      "items": []
+    },
+    "search_completeness": {
+      "evidence_cap": 1.0,
+      "ratio": 1.0,
+      "reliably_compared": 2,
+      "total": 2
+    },
+    "search_completeness_policy_version": 1,
+    "stats": {
+      "beam_roots_evaluated": 0,
+      "candidates_evaluated": 4,
+      "config": {
+        "beam_width": 2,
+        "candidate_budget": 32,
+        "max_depth": 2,
+        "node_budget": 32,
+        "seed": 202,
+        "sim_branch_budget": 64
+      },
+      "deduplicated_nodes": 1,
+      "layer_widths": [
+        2,
+        0
+      ],
+      "legal_root_total": 2,
+      "lethal_candidates_evaluated": 4,
+      "lethal_max_depth_reached": 2,
+      "lethal_nodes_visited": 4,
+      "lethal_roots_evaluated": 2,
+      "lethal_simulation_branches_examined": 4,
+      "max_depth_reached": 2,
+      "nodes_visited": 4,
+      "roots_evaluated": 2,
+      "roots_reliably_compared": 2,
+      "simulation_branches_examined": 4,
+      "unknown_roots": 0,
+      "unsupported_roots": 0
+    },
+    "stop_reasons": []
+  }
+}

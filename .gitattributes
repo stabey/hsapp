@@ -1,0 +1,7 @@
+# Captured log fixtures must stay byte-stable. In particular, one upstream
+# fixture intentionally uses CRLF; Git must not rewrite it during checkout/add.
+tests/logs/real/*.power.log -text whitespace=-blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+# Generated notices embed upstream license texts whose original CRLF and
+# trailing whitespace must remain byte-stable across checkout and packaging.
+THIRD_PARTY_NOTICES.html -text whitespace=-blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

@@ -1,0 +1,13 @@
+# 下水道之王:从三张私藏的野兽牌中发现一张(固定池 = 本牌组私藏)。
+pool_id: jail_831.sideboard
+source_card_id: JAIL_831
+build_range:
+  min: 249896
+kind: explicit
+include: [EDR_527, EDR_489, TLC_436]
+context_inputs: [build, source_card]
+selection:
+  picks: 3
+  distinct: true
+weight_rule: uniform
+status: verified

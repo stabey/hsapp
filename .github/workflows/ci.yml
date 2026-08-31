@@ -1,0 +1,113 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+    # 打 v* 标签时额外触发发布版出包（见下方 bundle job）
+    tags: ["v*"]
+  pull_request:
+  # 需要一份可下载的 .app 时，在 Actions 页面手动触发
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  check:
+    name: fmt / clippy / test (macOS)
+    runs-on: macos-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install Rust toolchain (from rust-toolchain.toml)
+        uses: dtolnay/rust-toolchain@4360b52568e2003a75bf9bc1d59f33a8e3fc893c # stable snapshot
+        with:
+          toolchain: "1.97.1"
+          components: rustfmt, clippy
+
+      - uses: Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6 # v2.9.2
+        with:
+          # Fork PR 可读公开缓存，但不能把未信任的构建结果写回缓存。
+          save-if: ${{ github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository }}
+
+      - name: cargo fmt
+        run: cargo fmt --all -- --check
+
+      - name: cargo clippy
+        run: cargo clippy --workspace --all-targets --all-features --locked -- -D warnings
+
+      - name: cargo test
+        run: cargo test --workspace --locked
+
+      # 日常体检：确认打包流程没有悄悄失效。放在 cargo test 之后蹭调试版编译缓存，
+      # 增量成本很小；不上传产物，跑通即可。xtask bundle 自带结构/plist/规则/签名四项自检。
+      - name: cargo xtask bundle (packaging smoke test)
+        run: cargo xtask bundle
+
+  bundle:
+    name: release .app artifact (macOS)
+    # 只在手动触发或打 v* 标签时生成可下载产物，日常 push / PR 只做打包冒烟检查。
+    if: github.event_name == 'workflow_dispatch' || startsWith(github.ref, 'refs/tags/v')
+    needs: check
+    runs-on: macos-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install Rust toolchain (from rust-toolchain.toml)
+        uses: dtolnay/rust-toolchain@4360b52568e2003a75bf9bc1d59f33a8e3fc893c # stable snapshot
+        with:
+          toolchain: "1.97.1"
+
+      - uses: Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6 # v2.9.2
+        with:
+          save-if: ${{ github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository }}
+
+      - name: cargo xtask bundle --release
+        run: cargo xtask bundle --release
+
+      # 必须用 ditto 而不是 zip：普通 zip 会丢掉可执行权限与签名信息，
+      # 解压出来的应用打不开。先压成 .zip 再上传，上传器只当它是普通文件。
+      - name: Compress .app (ditto preserves exec bits and signature)
+        working-directory: target/release/bundle
+        run: ditto -c -k --sequesterRsrc --keepParent HearthAdvisor.app HearthAdvisor-macos.zip
+
+      - name: Validate downloadable .app
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          archive="target/release/bundle/HearthAdvisor-macos.zip"
+          test -s "$archive"
+
+          validation_dir="$(mktemp -d "${RUNNER_TEMP}/hearth-advisor-artifact.XXXXXX")"
+          ditto -x -k "$archive" "$validation_dir"
+          app="$validation_dir/HearthAdvisor.app"
+
+          test -x "$app/Contents/MacOS/desktop"
+          test -s "$app/Contents/Resources/Legal/LICENSE"
+          test -s "$app/Contents/Resources/Legal/THIRD_PARTY_NOTICES.html"
+          test -d "$app/Contents/Resources/rules/cards"
+          test -d "$app/Contents/Resources/rules/pools"
+          cmp LICENSE "$app/Contents/Resources/Legal/LICENSE"
+          cmp THIRD_PARTY_NOTICES.html "$app/Contents/Resources/Legal/THIRD_PARTY_NOTICES.html"
+          codesign --verify --strict --verbose=2 "$app"
+
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: HearthAdvisor-macos-${{ github.sha }}
+          path: target/release/bundle/HearthAdvisor-macos.zip
+          if-no-files-found: error
+          retention-days: 14

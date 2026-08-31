@@ -1,0 +1,4 @@
+# `cargo xtask <子命令>` 的别名注册(打包器见 xtask/src/main.rs)。
+# 固定使用 Cargo.lock，避免本地与 CI 在打包时安静地解析出不同依赖。
+[alias]
+xtask = "run --locked --package xtask --"

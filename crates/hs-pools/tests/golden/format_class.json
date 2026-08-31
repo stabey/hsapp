@@ -1,0 +1,55 @@
+{
+  "pool_id": "golden.format_class",
+  "build_id": 249896,
+  "context_hash": "8708aa91c0c5745134789059d3018f612022256ea53d68a9e4d7384791bdd0f9",
+  "candidates": [
+    {
+      "card_id": "CS2_029",
+      "dbf_id": 315,
+      "weight": 1.0
+    },
+    {
+      "card_id": "CS2_032",
+      "dbf_id": 1004,
+      "weight": 1.0
+    },
+    {
+      "card_id": "EX1_277",
+      "dbf_id": 564,
+      "weight": 1.0
+    }
+  ],
+  "trace": [
+    {
+      "step": "initial",
+      "removed": 0,
+      "remaining": 17
+    },
+    {
+      "step": "format_legal",
+      "removed": 5,
+      "remaining": 12
+    },
+    {
+      "step": "card_type=SPELL",
+      "removed": 6,
+      "remaining": 6
+    },
+    {
+      "step": "class_matches",
+      "removed": 2,
+      "remaining": 4
+    },
+    {
+      "step": "collectible=true",
+      "removed": 0,
+      "remaining": 4
+    },
+    {
+      "step": "exclude_source",
+      "removed": 1,
+      "remaining": 3
+    }
+  ],
+  "exact": true
+}

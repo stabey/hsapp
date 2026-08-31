@@ -1,0 +1,13 @@
+[package]
+name = "hs-ui"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+# 注意：hs-ui 是唯一允许依赖 GPUI 的库 crate（另有 apps/desktop）。
+
+[dependencies]
+hs-types.workspace = true
+# 与 apps/desktop 同一精确锁定（升级流程见 ADR-0002）
+gpui = { version = "=0.2.2", features = ["runtime_shaders"] }

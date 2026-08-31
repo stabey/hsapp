@@ -1,0 +1,19 @@
+# 穆克拉:战吼——使你的对手获得两根香蕉(EX1_014t 置入对手手牌)。
+schema: 1
+card_id: CORE_EX1_014
+build_range:
+  min: 249896
+status: verified
+confidence: 1.0
+triggers:
+  - event: battlecry
+    effects:
+      - !create_card
+        player: opponent
+        card: !id EX1_014t
+        zone: Hand
+        count: 2
+evidence:
+  - kind: test
+    reference: crates/hs-sim/tests/deck_rules.rs
+    date: "2026-08-24"

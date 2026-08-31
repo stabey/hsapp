@@ -1,0 +1,17 @@
+# 恐惧畏缩:对一个随从造成 3 点伤害。
+# partial:「本回合下一张野兽牌费用 -2」是延时费用光环,超出 M3
+# 执行范围(无跨操作延时效果),未表达。
+schema: 1
+card_id: TLC_823
+build_range:
+  min: 249896
+status: partial
+confidence: 0.8
+play:
+  - !damage
+    target: target
+    amount: 3
+evidence:
+  - kind: test
+    reference: crates/hs-sim/tests/deck_rules.rs
+    date: "2026-08-24"

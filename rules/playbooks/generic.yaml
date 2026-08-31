@@ -1,0 +1,53 @@
+schema_version: 1
+id: generic
+priority: 0
+applies_to:
+  build_range:
+    min: 0
+  deck_signatures: []
+weights:
+  friendly_effective_health: 100
+  opponent_effective_health: -140
+  friendly_board_attack: 220
+  opponent_board_attack: -240
+  friendly_board_health: 90
+  opponent_board_health: -100
+  friendly_board_value: 120
+  opponent_board_value: -130
+  friendly_hand_size: 55
+  opponent_hand_size: -45
+  resource_advantage: 100
+  mana_efficiency: 90
+  playbook_preference: 0
+  risk_penalty: -1000
+risk_weight_milli: 250
+win_points:
+  - id: stay_alive
+    feature: friendly_effective_health
+    comparison: at_least
+    threshold: 15
+    message: 保持安全血线，避免把当前优势换成可见的反击窗口。
+  - id: pressure_range
+    feature: opponent_effective_health
+    comparison: at_most
+    threshold: 10
+    message: 对手已进入低有效生命区间，优先保留持续施压能力。
+explanations:
+  friendly_effective_health:
+    positive: 己方有效生命更安全。
+    negative: 这条路线会压低己方有效生命。
+  opponent_effective_health:
+    positive: 这条路线有效压低了对手生命与护甲。
+    negative: 对手仍保留较高的有效生命。
+  friendly_board_attack:
+    positive: 己方场攻得到保留或增长。
+    negative: 己方后续场攻有所损失。
+  opponent_board_attack:
+    positive: 对手可见场攻得到控制。
+    negative: 对手仍保留较高场攻。
+  mana_efficiency:
+    positive: 本回合法力利用充分。
+    negative: 本回合留下了较多未利用法力。
+  risk_penalty:
+    positive: 这条路线的已知下行风险较低。
+    negative: 随机性或局面波动带来额外下行风险。

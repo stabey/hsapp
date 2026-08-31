@@ -1,0 +1,12 @@
+# 重生的翼手龙(下水道之王私藏):突袭、吸血;消耗残骸而非法力值。
+# unknown:纯关键字 + 残骸资源系统,无 M3 可执行语义。
+schema: 1
+card_id: TLC_436
+build_range:
+  min: 249896
+status: unknown
+confidence: 0.0
+evidence:
+  - kind: manual
+    reference: 卡牌文本(build 249896)
+    date: "2026-08-24"

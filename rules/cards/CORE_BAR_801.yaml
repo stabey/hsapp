@@ -1,0 +1,20 @@
+# 击伤猎物:造成 1 点伤害;召唤一只 1/1 并具有突袭的土狼(BAR_035t)。
+# 突袭关键字不进直接执行范围(召唤实体属性由日志观察),不影响本卡语义骨架。
+schema: 1
+card_id: CORE_BAR_801
+build_range:
+  min: 249896
+status: verified
+confidence: 1.0
+play:
+  - !damage
+    target: target
+    amount: 1
+  - !summon
+    player: self_player
+    card: !id BAR_035t
+    count: 1
+evidence:
+  - kind: test
+    reference: crates/hs-sim/tests/deck_rules.rs
+    date: "2026-08-24"

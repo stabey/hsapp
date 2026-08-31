@@ -1,0 +1,19 @@
+# 下水道之王:战吼——从三张私藏野兽牌中发现一张(池 jail_831.sideboard)。
+# partial:「其费用 -3」是发现后附魔,超出 M3 执行范围,未表达。
+schema: 1
+card_id: JAIL_831
+build_range:
+  min: 249896
+status: partial
+confidence: 0.8
+triggers:
+  - event: battlecry
+    effects:
+      - !discover
+        pool: jail_831.sideboard
+        options: 3
+        count: 1
+evidence:
+  - kind: test
+    reference: crates/hs-sim/tests/deck_rules.rs
+    date: "2026-08-24"

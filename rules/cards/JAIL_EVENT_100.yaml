@@ -1,0 +1,19 @@
+# 蛙生:战吼——发现一张随从牌(池 discover.any_minion)。
+# partial:「选中可疑的随从获得 +1/+1」依赖对局内隐藏信息判定,未表达。
+schema: 1
+card_id: JAIL_EVENT_100
+build_range:
+  min: 249896
+status: partial
+confidence: 0.8
+triggers:
+  - event: battlecry
+    effects:
+      - !discover
+        pool: discover.any_minion
+        options: 3
+        count: 1
+evidence:
+  - kind: test
+    reference: crates/hs-sim/tests/deck_rules.rs
+    date: "2026-08-24"

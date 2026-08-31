@@ -1,0 +1,24 @@
+[package]
+name = "hs-planner"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+chrono.workspace = true
+hs-advisor-api.workspace = true
+hs-belief.workspace = true
+hs-observed-state.workspace = true
+hs-sim.workspace = true
+hs-types.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+serde_yaml.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+hs-effect-ir.workspace = true
+hs-log-core.workspace = true
+hs-log-record.workspace = true
+hs-pools.workspace = true

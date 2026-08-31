@@ -1,0 +1,16 @@
+# 追踪术:从你的牌库中发现一张牌(动态池 tracking.from_deck)。
+schema: 1
+card_id: CORE_DS1_184
+build_range:
+  min: 249896
+status: partial
+confidence: 0.9
+play:
+  - !discover
+    pool: tracking.from_deck
+    options: 3
+    count: 1
+evidence:
+  - kind: test
+    reference: crates/hs-sim/tests/deck_rules.rs(mock 池执行;真实牌库池待真机)
+    date: "2026-08-24"

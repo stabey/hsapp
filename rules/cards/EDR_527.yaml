@@ -1,0 +1,13 @@
+# 阿莎曼(下水道之王私藏):战吼——用对手牌库中牌的复制填满手牌,费用 -3。
+# unknown:需要对手牌库具体牌(未观测信息),执行必然
+# Unsupported(InsufficientState);复制+附魔也超 M3 范围。
+schema: 1
+card_id: EDR_527
+build_range:
+  min: 249896
+status: unknown
+confidence: 0.0
+evidence:
+  - kind: manual
+    reference: 卡牌文本(build 249896)
+    date: "2026-08-24"

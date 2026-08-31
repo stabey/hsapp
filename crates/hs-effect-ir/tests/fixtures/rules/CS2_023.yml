@@ -1,0 +1,22 @@
+schema: 1
+card_id: CS2_023
+build_range:
+  min: 1
+  max: 200000
+status: verified
+confidence: 1.0
+play:
+  - !draw
+    player: self_player
+    count: 2
+---
+schema: 1
+card_id: CS2_023
+build_range:
+  min: 200001
+status: inferred
+confidence: 0.7
+play:
+  - !draw
+    player: self_player
+    count: 2

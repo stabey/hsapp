@@ -1,0 +1,13 @@
+# 暴掠龙女王:延系——对一个敌方随从造成等同于本随从攻击力的伤害。
+# unknown:伤害量为动态值(等同攻击力),Operation::Damage 的 amount
+# 是常量,不可表达;延系触发时机也未入 TriggerEvent。
+schema: 1
+card_id: TLC_825
+build_range:
+  min: 249896
+status: unknown
+confidence: 0.0
+evidence:
+  - kind: manual
+    reference: 卡牌文本(build 249896);动态数值需 IR 表达力扩展(M4 前议)
+    date: "2026-08-24"

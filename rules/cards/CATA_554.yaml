@@ -1,0 +1,18 @@
+# 撼地巨吼:将一个敌方随从的生命值变为 1(ModifyTag 置值语义)。
+# partial:「如果你的手牌中有龙牌,再选一个」需要二次选目标,超出
+# M3 目标绑定模型(单 target),未表达。
+schema: 1
+card_id: CATA_554
+build_range:
+  min: 249896
+status: partial
+confidence: 0.8
+play:
+  - !modify_tag
+    target: target
+    tag: HEALTH
+    value: 1
+evidence:
+  - kind: test
+    reference: crates/hs-sim/tests/deck_rules.rs
+    date: "2026-08-24"

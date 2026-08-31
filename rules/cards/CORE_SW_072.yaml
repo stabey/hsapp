@@ -1,0 +1,20 @@
+# 锈烂蝰蛇:战吼——摧毁对手的武器。
+# partial:可交易关键字超出 M3 执行范围,未表达。
+schema: 1
+card_id: CORE_SW_072
+build_range:
+  min: 249896
+status: partial
+confidence: 0.8
+triggers:
+  - event: battlecry
+    effects:
+      - !destroy
+        target: !filter
+          - !entities_in_zone Play
+          - controller: opponent
+            card_type: WEAPON
+evidence:
+  - kind: test
+    reference: crates/hs-sim/tests/deck_rules.rs
+    date: "2026-08-24"

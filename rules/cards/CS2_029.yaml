@@ -1,0 +1,15 @@
+# 火球术:对目标造成 6 点伤害。
+schema: 1
+card_id: CS2_029
+build_range:
+  min: 249896
+status: verified
+confidence: 1.0
+play:
+  - !damage
+    target: target
+    amount: 6
+evidence:
+  - kind: test
+    reference: crates/hs-sim/tests/operations.rs(damage 语义)
+    date: "2026-08-23"

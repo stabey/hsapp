@@ -1,0 +1,13 @@
+# 食物链(任务):使用攻击力为 1,3,5,7 的野兽牌各一张,奖励绍克(TLC_830t)。
+# unknown:任务进度追踪是跨回合状态机,M3 无对应机制;规则占位,
+# 覆盖率报表如实显示无可执行实现。
+schema: 1
+card_id: TLC_830
+build_range:
+  min: 249896
+status: unknown
+confidence: 0.0
+evidence:
+  - kind: manual
+    reference: 卡牌文本(build 249896);任务机制留 M4+
+    date: "2026-08-24"

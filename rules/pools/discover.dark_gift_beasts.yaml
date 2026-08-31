@@ -1,0 +1,20 @@
+# 迅猛龙先锋:发现一张具有黑暗之赐的野兽牌。
+# 已知降级:「黑暗之赐」与 Tribe 过滤都不可精确表达(同 random.beast_cards),
+# 候选偏宽;status=partial 记录缺口。
+pool_id: discover.dark_gift_beasts
+source_card_id: CORE_EDR_004_2026
+build_range:
+  min: 249896
+kind: discover
+filters:
+  - format_legal
+  - !card_type MINION
+  - !tribe BEAST
+  - !collectible true
+  - exclude_source
+context_inputs: [build, format, source_card]
+selection:
+  picks: 3
+  distinct: true
+weight_rule: uniform
+status: partial

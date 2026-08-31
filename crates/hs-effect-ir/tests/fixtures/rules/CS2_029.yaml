@@ -1,0 +1,13 @@
+schema: 1
+card_id: CS2_029
+build_range:
+  min: 1
+status: verified
+confidence: 1.0
+play:
+  - !damage
+    target: target
+    amount: 6
+evidence:
+  - kind: test
+    reference: tests/fixtures/rules/CS2_029.yaml

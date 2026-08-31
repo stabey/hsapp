@@ -1,0 +1,17 @@
+# 变形术:目标随从变形成 1/1 绵羊。
+# Transform 在 M3 执行子集之外(design §4):IR 可表达、试执行显式报告
+# Unsupported(NotImplemented)——这正是「未支持显式报告」的活例。
+schema: 1
+card_id: CS2_022
+build_range:
+  min: 249896
+status: partial
+confidence: 0.9
+play:
+  - !transform
+    target: target
+    into: !id CS2_tk1
+evidence:
+  - kind: manual
+    reference: 经典卡牌文本(变形术→绵羊 CS2_tk1)
+    date: "2026-08-23"

@@ -1,0 +1,39 @@
+# 莎拉达希尔:获取全部 5 张梦境牌(DREAM_01–05 置入手牌)。
+# partial:「使用过更高费牌则腐蚀为 EDR_846t*」的条件替换未表达
+# (需要手牌期历史,超出 M3 状态模型)。
+schema: 1
+card_id: EDR_846
+build_range:
+  min: 249896
+status: partial
+confidence: 0.7
+play:
+  - !create_card
+    player: self_player
+    card: !id DREAM_01
+    zone: Hand
+    count: 1
+  - !create_card
+    player: self_player
+    card: !id DREAM_02
+    zone: Hand
+    count: 1
+  - !create_card
+    player: self_player
+    card: !id DREAM_03
+    zone: Hand
+    count: 1
+  - !create_card
+    player: self_player
+    card: !id DREAM_04
+    zone: Hand
+    count: 1
+  - !create_card
+    player: self_player
+    card: !id DREAM_05
+    zone: Hand
+    count: 1
+evidence:
+  - kind: test
+    reference: crates/hs-sim/tests/deck_rules.rs
+    date: "2026-08-24"

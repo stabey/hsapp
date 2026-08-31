@@ -1,0 +1,12 @@
+# 追踪术:从你的牌库中发现一张牌(动态池,需状态快照)。
+pool_id: tracking.from_deck
+source_card_id: CORE_DS1_184
+build_range:
+  min: 249896
+kind: from_deck
+context_inputs: [build, source_card, deck]
+selection:
+  picks: 1
+  distinct: true
+weight_rule: uniform
+status: verified

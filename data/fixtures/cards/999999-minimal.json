@@ -1,0 +1,24 @@
+{
+  "_meta": {
+    "build_id": 999999,
+    "authenticity": "synthetic",
+    "source": "Manually assembled using the HearthstoneJSON field schema and Blizzard Hearthstone card data.",
+    "rights": "Card IDs, names, text, and game data are Blizzard Entertainment content, are excluded from the repository MIT License, and are described in THIRD_PARTY_NOTICES.html.",
+    "note": "G0 最小卡牌集：覆盖英雄/英雄技能/随从/法术/武器/奥秘/衍生物/Enchantment。字段风格对齐 HearthstoneJSON，数值为经典卡真实数值。",
+    "created": "2026-08-20"
+  },
+  "cards": [
+    {"id": "HERO_01", "dbfId": 7, "type": "HERO", "set": "CORE", "cardClass": ["WARRIOR"], "health": 30, "collectible": true, "name": {"zhCN": "加尔鲁什·地狱咆哮", "enUS": "Garrosh Hellscream"}},
+    {"id": "CS2_102", "dbfId": 725, "type": "HERO_POWER", "set": "CORE", "cardClass": ["WARRIOR"], "cost": 2, "collectible": false, "name": {"zhCN": "全副武装！", "enUS": "Armor Up!"}, "text": {"zhCN": "英雄技能 获得2点护甲值。", "enUS": "Hero Power Gain 2 Armor."}},
+    {"id": "CS2_182", "dbfId": 1369, "type": "MINION", "set": "CORE", "rarity": "COMMON", "cardClass": ["NEUTRAL"], "cost": 4, "attack": 4, "health": 5, "collectible": true, "name": {"zhCN": "冰风雪人", "enUS": "Chillwind Yeti"}},
+    {"id": "CS2_029", "dbfId": 315, "type": "SPELL", "set": "CORE", "rarity": "COMMON", "cardClass": ["MAGE"], "cost": 4, "collectible": true, "name": {"zhCN": "火球术", "enUS": "Fireball"}, "text": {"zhCN": "造成$6点伤害。", "enUS": "Deal $6 damage."}},
+    {"id": "CS2_106", "dbfId": 401, "type": "WEAPON", "set": "CORE", "rarity": "COMMON", "cardClass": ["WARRIOR"], "cost": 3, "attack": 3, "collectible": true, "name": {"zhCN": "炽炎战斧", "enUS": "Fiery War Axe"}},
+    {"id": "EX1_554", "dbfId": 1662, "type": "SPELL", "set": "EXPERT1", "rarity": "EPIC", "cardClass": ["HUNTER"], "cost": 2, "collectible": true, "name": {"zhCN": "蛇形陷阱", "enUS": "Snake Trap"}, "text": {"zhCN": "奥秘：当你的一个随从被攻击时，召唤三条1/1的蛇。", "enUS": "Secret: When one of your minions is attacked, summon three 1/1 Snakes."}},
+    {"id": "EX1_554t", "dbfId": 1663, "type": "MINION", "set": "EXPERT1", "cardClass": ["HUNTER"], "cost": 1, "attack": 1, "health": 1, "collectible": false, "name": {"zhCN": "蛇", "enUS": "Snake"}},
+    {"id": "CS2_101t", "dbfId": 754, "type": "MINION", "set": "CORE", "cardClass": ["PALADIN"], "cost": 1, "attack": 1, "health": 1, "collectible": false, "name": {"zhCN": "白银之手新兵", "enUS": "Silver Hand Recruit"}},
+    {"id": "CS2_222", "dbfId": 1401, "type": "MINION", "set": "CORE", "rarity": "COMMON", "cardClass": ["NEUTRAL"], "cost": 7, "attack": 6, "health": 6, "collectible": true, "name": {"zhCN": "暴风城勇士", "enUS": "Stormwind Champion"}, "text": {"zhCN": "你的其他随从获得+1/+1。", "enUS": "Your other minions have +1/+1."}},
+    {"id": "CS2_222o", "dbfId": 1402, "type": "ENCHANTMENT", "set": "CORE", "cardClass": ["NEUTRAL"], "collectible": false, "name": {"zhCN": "暴风城的力量", "enUS": "Might of Stormwind"}, "text": {"zhCN": "+1/+1。", "enUS": "+1/+1."}},
+    {"id": "EX1_339", "dbfId": 1004, "type": "SPELL", "set": "EXPERT1", "rarity": "RARE", "cardClass": ["PRIEST"], "cost": 3, "collectible": true, "name": {"zhCN": "思维窃取", "enUS": "Thoughtsteal"}, "text": {"zhCN": "从你对手的牌库中复制两张牌，将其置入你的手牌。", "enUS": "Copy 2 cards in your opponent's deck and add them to your hand."}},
+    {"id": "GAME_005", "dbfId": 1746, "type": "SPELL", "set": "CORE", "cardClass": ["NEUTRAL"], "cost": 0, "collectible": false, "name": {"zhCN": "幸运币", "enUS": "The Coin"}, "text": {"zhCN": "在本回合中，获得一个法力水晶。", "enUS": "Gain 1 Mana Crystal this turn only."}}
+  ]
+}

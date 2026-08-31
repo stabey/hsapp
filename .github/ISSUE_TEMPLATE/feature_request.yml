@@ -1,0 +1,43 @@
+name: Feature request
+description: Propose a focused improvement to Hearth Advisor.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Explain the player-visible problem first. Please avoid attaching game
+        assets or unsanitized logs.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is difficult today, and who is affected?
+    validations:
+      required: true
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: Describe what success should look like without prescribing internal types or modules.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What workarounds or other approaches have you tried?
+
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Project boundaries
+      options:
+        - label: The proposal does not require clicking, injecting into, or automating the game.
+          required: true
+        - label: Any attached logs or screenshots use synthetic identities and contain no private data.
+          required: true

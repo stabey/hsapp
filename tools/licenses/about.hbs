@@ -1,0 +1,127 @@
+<!--
+  Generated with cargo-about 0.9.2. Do not edit THIRD_PARTY_NOTICES.html by
+  hand; edit this template or about.toml and regenerate it instead.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hearth Advisor Third-Party Notices</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font: 15px/1.5 system-ui, sans-serif; margin: 0; }
+    main { margin: 0 auto; max-width: 960px; padding: 2rem; }
+    h1, h2, h3, h4 { line-height: 1.2; }
+    .notice { border: 1px solid #8886; border-radius: .5rem; padding: 1rem; }
+    .license-text { border: 1px solid #8886; border-radius: .5rem;
+      max-height: 24rem; overflow: auto; padding: 1rem; white-space: pre-wrap; }
+    .used-by { columns: 2 20rem; }
+    code { overflow-wrap: anywhere; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Hearth Advisor Third-Party Notices</h1>
+  <p>
+    Hearth Advisor's root MIT License covers original project source only.
+    The projects and content below remain subject to their own terms. This
+    document is distributed with the source tree and the macOS application.
+  </p>
+
+  <h2>HearthSim development tools and fixtures</h2>
+  <div class="notice">
+    <h3>python-hearthstone 9.20.10</h3>
+    <p>
+      The generated GameTag name and value tables are derived from
+      <a href="https://github.com/HearthSim/python-hearthstone">python-hearthstone</a>,
+      Copyright (c) Jerome Leclanche, under the MIT License. The generated
+      file headers retain this provenance.
+    </p>
+
+    <h3>python-hslog 1.20.0</h3>
+    <p>
+      <a href="https://github.com/HearthSim/python-hslog">python-hslog</a>,
+      Copyright (c) Jerome Leclanche, is used only as a local differential-test
+      oracle and is licensed under the MIT License.
+    </p>
+
+    <h3>hsreplay-test-data</h3>
+    <p>
+      Some replay fixtures originated in
+      <a href="https://github.com/HearthSim/hsreplay-test-data">hsreplay-test-data</a>
+      under CC0-1.0. Hearth Advisor's copies replace player names and account
+      identifiers with synthetic values and are no longer byte-for-byte copies.
+      CC0 does not grant trademark, publicity, privacy, or third-party content
+      rights.
+    </p>
+
+    <h3>HearthstoneJSON</h3>
+    <p>
+      The application can download structured card data and artwork from the
+      <a href="https://hearthstonejson.com/">HearthstoneJSON</a> service.
+      HearthstoneJSON.com states that its website is available under CC0, while
+      its JSON files contain Blizzard-copyrighted game data. Downloaded card
+      data and artwork are not covered by Hearth Advisor's MIT License.
+    </p>
+  </div>
+
+  <h2>MIT notice for python-hearthstone and python-hslog</h2>
+  <pre class="license-text">Copyright (c) Jerome Leclanche
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</pre>
+
+  <h2>Blizzard and Hearthstone content</h2>
+  <div class="notice">
+    <p>
+      Hearth Advisor is an independent community project. It is not affiliated
+      with, endorsed by, sponsored by, or approved by Blizzard Entertainment.
+      Hearthstone, Blizzard, and related names, card text, game data, artwork,
+      and trademarks are the property of their respective owners. No Blizzard
+      content or trademark rights are granted under Hearth Advisor's MIT License.
+    </p>
+  </div>
+
+  <h2>Rust dependency license overview</h2>
+  <ul>
+  {{#each overview}}
+    <li><a href="#{{id}}">{{name}}</a> ({{count}} uses)</li>
+  {{/each}}
+  </ul>
+
+  <h2>Rust dependency license texts</h2>
+  {{#each licenses}}
+  <section>
+    {{#if first_of_kind}}<h3 id="{{id}}">{{name}}</h3>{{/if}}
+    <h4 id="{{id}}-{{@index}}">Packages using this text</h4>
+    <ul class="used-by">
+    {{#each used_by}}
+      <li>
+        <a href="{{#if crate.repository}}{{crate.repository}}{{else}}https://crates.io/crates/{{crate.name}}{{/if}}">
+          {{crate.name}} {{crate.version}}
+        </a>
+      </li>
+    {{/each}}
+    </ul>
+    <pre class="license-text">{{text}}</pre>
+  </section>
+  {{/each}}
+</main>
+</body>
+</html>

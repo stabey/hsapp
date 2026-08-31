@@ -1,0 +1,11 @@
+# 流沙巨口:3 费 7/2 白板随从,无卡牌文本,无效果。
+schema: 1
+card_id: TIME_053
+build_range:
+  min: 249896
+status: verified
+confidence: 1.0
+evidence:
+  - kind: manual
+    reference: 卡牌库文本为空(build 249896),白板随从
+    date: "2026-08-24"

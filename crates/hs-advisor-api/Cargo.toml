@@ -1,0 +1,15 @@
+[package]
+name = "hs-advisor-api"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+chrono.workspace = true
+hs-belief.workspace = true
+hs-types.workspace = true
+serde.workspace = true
+
+[dev-dependencies]
+serde_json.workspace = true

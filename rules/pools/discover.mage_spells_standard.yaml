@@ -1,0 +1,20 @@
+# 发现池示例:标准模式法师法术(可收藏,排除来源卡)。
+# Inspector 页点击本池可看逐级过滤 Trace 与候选。
+pool_id: discover.mage_spells_standard
+source_card_id: CS2_029
+build_range:
+  min: 249896
+kind: discover
+filters:
+  - format_legal
+  - !card_type SPELL
+  - !class_matches
+    include_neutral: false
+  - !collectible true
+  - exclude_source
+context_inputs: [build, format, player_class, source_card]
+selection:
+  picks: 3
+  distinct: true
+weight_rule: uniform
+status: inferred

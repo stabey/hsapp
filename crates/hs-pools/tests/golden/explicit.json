@@ -1,0 +1,35 @@
+{
+  "pool_id": "golden.explicit",
+  "build_id": 249896,
+  "context_hash": "17910d5332247ba81c514e23ac98a2363bb62ab09d46c05396ee4352e60b8db1",
+  "candidates": [
+    {
+      "card_id": "CS2_122",
+      "dbf_id": 1401,
+      "weight": 1.0
+    },
+    {
+      "card_id": "EX1_066",
+      "dbf_id": 906,
+      "weight": 1.0
+    },
+    {
+      "card_id": "NEW1_019",
+      "dbf_id": 1073,
+      "weight": 1.0
+    }
+  ],
+  "trace": [
+    {
+      "step": "initial",
+      "removed": 0,
+      "remaining": 3
+    },
+    {
+      "step": "include",
+      "removed": 0,
+      "remaining": 3
+    }
+  ],
+  "exact": true
+}

@@ -1,0 +1,15 @@
+# 奥术智慧:抽两张牌。
+schema: 1
+card_id: CS2_023
+build_range:
+  min: 249896
+status: verified
+confidence: 1.0
+play:
+  - !draw
+    player: self_player
+    count: 2
+evidence:
+  - kind: test
+    reference: crates/hs-sim/tests/operations.rs(draw 语义)
+    date: "2026-08-23"

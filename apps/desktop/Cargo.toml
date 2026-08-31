@@ -1,0 +1,35 @@
+[package]
+name = "desktop"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+hs-types.workspace = true
+hs-diagnostics.workspace = true
+hs-platform.workspace = true
+hs-overlay-platform.workspace = true
+hs-log-tailer.workspace = true
+hs-log-core.workspace = true
+hs-observed-state.workspace = true
+hs-deckstrings.workspace = true
+hs-decks.workspace = true
+hs-tracker.workspace = true
+hs-card-db.workspace = true
+hs-effect-ir.workspace = true
+hs-pools.workspace = true
+hs-sim.workspace = true
+hs-advisor-api.workspace = true
+hs-planner.workspace = true
+hs-ui.workspace = true
+anyhow.workspace = true
+chrono.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+raw-window-handle.workspace = true
+# GPUI：Zed 官方 crates.io 发布，精确版本锁定（升级流程见 ADR-0002）
+# runtime_shaders：本机无完整 Xcode（无 metal CLI）时改为运行时编译着色器
+gpui = { version = "=0.2.2", features = ["runtime_shaders"] }
