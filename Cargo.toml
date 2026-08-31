@@ -70,7 +70,7 @@ serde_yaml = "0.9"
 # macOS 原生（版本与 gpui 0.2.2 传递依赖对齐，避免重复编译）
 objc = "0.2"
 core-foundation = "0.10"
-core-graphics = "0.24"
+core-graphics = "0.25"
 raw-window-handle = "0.6"
 
 [profile.dev]
